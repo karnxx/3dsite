@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>3DPlayground..</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Notable&family=Pixelify+Sans:wght@400..700&display=swap');
+
+        #interbox, #interbox2{
+            width:100%;
+            aspect-ratio: 1;
+        }
+
+        body > canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Notable", sans-serif;
+            font-weight: 400;
+            letter-spacing: 5px;
+            font-style: normal;
+
+            margin: 0;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+            background-color: transparent;
+            height: 2000px;
+        }
+
+        .firstone,
+        .secondone {
+            position: relative;
+
+            margin-top: 50px;
+
+            background-color: rgb(2, 2, 2);
+            color: white;
+
+            overflow: hidden;
+        }
+
+        .firstone {
+            margin-right: 1000px;
+            padding: 20px 40px 20px 120px;
+        }
+
+        .secondone {
+            margin-left: 1000px;
+            padding: 20px 120px 20px 40px;
+        }
+
+        .linebox,
+        .lineboxr {
+            position: absolute;
+
+            top: 0;
+            bottom: 0;
+
+            width: 60px;
+
+            z-index: 10;
+
+            pointer-events: none;
+        }
+
+        .linebox {
+            left: 30px;
+
+            background: linear-gradient(
+                45deg,
+                #ffffff 15%,
+                #e0e0e0 15%,
+                #e0e0e0 40%,
+                #ffffff 40%,
+                #ffffff 65%,
+                #e0e0e0 65%,
+                #e0e0e0 90%
+            );
+        }
+
+        .lineboxr {
+            right: 30px;
+
+            background: linear-gradient(
+                -45deg,
+                #ffffff 15%,
+                #e0e0e0 15%,
+                #e0e0e0 40%,
+                #ffffff 40%,
+                #ffffff 65%,
+                #e0e0e0 65%,
+                #e0e0e0 90%
+            );
+        }
+
+        h1,
+        h4 {
+            margin: 0;
+        }
+
+        h4 {
+            margin-top: 10px;
+            font-family: "Pixelify Sans", sans-serif;
+            letter-spacing: 1px;
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/index-nEqxwj2D.js"></script>
+</head>
+
+<body>
+
+
+    <div class="firstone">
+        <div class="linebox"></div>
+        <h1>3D website!!</h1>
+    </div>
+
+    <div class="secondone" style="margin-top: 300px;">
+        <div class="lineboxr"></div>
+        <h1>BOXES</h1>
+        <h4>boxes r like 3d objects with 6 faces, which are quadrilaterals.
+            here, just drag an drop an img file and the texture of the box will change.
+        </h4>
+        <div id="interbox"></div>
+    </div>
+
+    <div class="firstone">
+        <div class="linebox"></div>
+        <h1>TORUSES</h1>
+        <h4>torus is a 3d shape that looks like a donut. it has a circular crosssection and a hole in the middle.
+            again,, just drag an drop an img file and the texture of the torus will change.
+        </h4>
+        <div id="interbox2"></div>
+    </div>
+
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+</body>
+
+</html>
