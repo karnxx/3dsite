@@ -13,7 +13,7 @@ document.body.appendChild(renderer.domElement);
 const loader = new GLTFLoader();
 let model;
 
-loader.load('/Untitled.gltf', (gltf) => {
+loader.load('/public/Untitled.gltf', (gltf) => {
   model = gltf.scene;
   sc.add(model);
   model.rotation.x = 90;
